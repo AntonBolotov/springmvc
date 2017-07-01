@@ -14,13 +14,13 @@
 <user username="tomcat" password="123" roles="manager-gui,manager-script"/>
 
 2. В конфигурационном файле Maven settings.xml (находится в папке conf, где установлен Maven) в разделе servers добавляем сервер Tomcat, с указанием логина и пароля пользователя, созданного в пункте 1
-<servers>
+`<servers>
     <server>
       <id>TomcatServer</id>
       <username>tomcat</username>
       <password>123</password>
     </server>
-  </servers>
+  </servers>`
 
 3. В pom.xml файле проекта в разделе плагина tomcat7-maven-plugin
   указываем сервер TomcatServer объявленный ранее в  пункте 2, указываем логин, пароль и путь, по которому будет
