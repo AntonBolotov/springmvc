@@ -5,7 +5,8 @@
 
 1. открываем консоль и переходим в папку <%папка проекта%>/hsqldb-2.4.0/hsqldb/lib
 2. выполняем комманду
-    java -cp hsqldb.jar org.hsqldb.er.Server --database.0 file:mydb --dbname.0 dvd_exchange
+    java -cp hsqldb.jar org.hsqldb.Server --database.0 file:mydb --dbname.0 dvd_exchange
+3. Восстанавливаем структуру БД из файла queries.sql, который лежит в корне приложения
 
 
 **Развертываем приложение**
