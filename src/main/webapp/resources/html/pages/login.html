@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <link href="resources/css/bootstrap3/bootstrap.css" rel="stylesheet"/>
+    <link href="resources/css/signin.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+
+    <form class="form-signin" name='f' action="login" method='POST'>
+        <h2 class="form-signin-heading">Пожалуйста, авторизуйтесь</h2>
+        <label for="j_username" class="sr-only">Логин</label>
+        <input id="j_username" name="username" class="form-control" placeholder="Email address" required="" autofocus="" type="text">
+        <label for="j_password" class="sr-only">Пароль</label>
+        <input id="j_password" name="password" class="form-control" placeholder="Password" required="" type="password">
+        <!--<div class="checkbox">-->
+            <!--<label>-->
+                <!--<input value="remember-me" name="_spring_security_remember_me" type="checkbox"> Запомнить меня-->
+            <!--</label>-->
+        <!--</div>-->
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+
+</div>
+<script>
+    $('.navbar').hide()
+</script>
+</body>
+</html>

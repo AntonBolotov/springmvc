@@ -1,0 +1,17 @@
+<div class="modal fade" visible-message="{{showMessage}}">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" ng-click="messageClose()" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <!--<h4 class="modal-title">Modal title</h4>-->
+            </div>
+            <div class="modal-body">
+                <p>{{ popUpDialogContent }}</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

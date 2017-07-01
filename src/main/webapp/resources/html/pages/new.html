@@ -1,0 +1,37 @@
+<div class="panel-heading">
+    <h2>Добавление нового DVD</h2>
+</div>
+<div class="panel-body">
+    <!--<form ng-controller="AddNewDvdCtrl" name="sampleForm"  method="post" action="dvd/new" ng-submit="submit()" enctype="multipart/form-data" novalidate>-->
+    <form name="dvdForm" novalidate>
+
+        <label>Название:</label>
+        <input type="text" class="form-control" name="dvdName" ng-model="dvdName" placeholder="Введите название Dvd"
+               ng-maxlength="255" required>
+
+        <span ng-show="dvdForm.dvdName.$error.required && dvdForm.dvdName.$dirty" class="help-block color-red">Название диска обязательно для заполнения.</span>
+        <span ng-show="!dvdForm.dvdName.$valid  && dvdForm.dvdName.$dirty" class="help-block color-red">Максимальная длинна поля 255 символов.</span>
+
+        <label>Описание:</label>
+        <textarea class="form-control" name="description" ng-model="description" rows="5" required
+                  ng-maxlength="1000"></textarea>
+        <span ng-show="dvdForm.description.$error.required  && dvdForm.description.$dirty" class="help-block color-red">Описание диска обязательно для заполнения.</span>
+        <span ng-show="!dvdForm.description.$valid  && dvdForm.description.$dirty" class="help-block color-red">Максимальная длинна поля 1000 символов.</span>
+
+        <label>Постер:</label>
+        <input type="file" class="form-control-file" valid-file name="poster" ng-model="poster" id="poster" required>
+        <span ng-show="dvdForm.poster.$error.required && dvdForm.poster.$dirty" class="help-block color-red">Постер обязательно для заполнения.</span>
+
+        <button class="btn btn-link" ng-click="reset(dvd)">Сбросить</button>
+        <input type="button" ng-click="submit(dvdForm)"  class="btn btn-primary" value="Добавить"
+               accept="image/jpeg,image/png,image/gif"
+               ng-disabled="dvdForm.$invalid">
+
+        <div class="alert alert-success margin-top-10" style="display: none">
+            <strong>Успех!</strong> Диск успешно добавлен в коллекцию.
+        </div>
+        <div class="alert alert-danger margin-top-10" style="display: none">
+            <strong>Ошибка!</strong> При добавлении диска произошла непредвиденная ошибка.
+        </div>
+    </form>
+</div>

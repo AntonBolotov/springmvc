@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory >
+        <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="hibernate.connection.url">jdbc:hsqldb:hsql://localhost:9001/dvd_exchange</property>
+        <property name="hibernate.connection.username">SA</property>
+        <property name="hibernate.connection.password"></property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="use_sql_comments">true</property>
+        <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="org.hibernate.SQL">TRACE</property>
+        <property name="connection.autocommit">true</property>
+
+        <mapping class="com.springapp.mvc.dto.Dvd" />
+        <mapping class="com.springapp.mvc.dto.Profile" />
+        <mapping class="com.springapp.mvc.dto.TakenItem" />
+
+    </session-factory>
+</hibernate-configuration>

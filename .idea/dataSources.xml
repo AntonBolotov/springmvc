@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4080999211">
+    <data-source source="LOCAL" name="HSQLDB - dvd_exchange@localhost" uuid="e8854c5f-c4a5-4a26-a08a-1d8b6fbe2e75">
+      <driver-ref>hsqldb.remote</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.hsqldb.jdbcDriver</jdbc-driver>
+      <jdbc-url>jdbc:hsqldb:hsql://localhost:9001/dvd_exchange</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>

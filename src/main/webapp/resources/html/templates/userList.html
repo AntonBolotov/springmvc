@@ -1,0 +1,16 @@
+<div class="modal fade" >
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" ng-click="userListClose()" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Выбор пользователя</h4>
+            </div>
+            <div class="modal-body">
+                <ul class="list-group" >
+                    <button type="button" class="list-group-item" ng-click="selectUser(user)" ng-repeat="user in users">{{user.name}}</button>
+                    <!--<li class="list-group-item list-group-item-action" ng-click="selectUser(user)" ng-repeat="user in users">{{user.name}}</li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

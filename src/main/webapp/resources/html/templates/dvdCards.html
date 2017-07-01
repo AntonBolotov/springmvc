@@ -1,0 +1,19 @@
+<div class="band">
+    <div class="item-1" ng-repeat="dvd in dvds">
+        <div href="" class="card">
+            <span class="user-label">{{dvd.profile.name}}</span>
+            <div class="thumb" ng-if="!dvd.poster" style="background-image: url(/resources/img/unknown.jpg);"></div>
+            <div class="thumb" ng-if="dvd.poster"
+                 style="background-image: url(data:image/jpeg;base64,{{dvd.poster}});"></div>
+            <article>
+                <h1>{{dvd.name}}</h1>
+                <span>{{dvd.description}}</span>
+
+            </article>
+            <div class="button-bar text-center">
+                <button class="btn btn-primary" ng-if="dvd.profile.id != currentProfile.id" ng-click="take(dvd)">Взять</button>
+                <button class="btn btn-primary" ng-if="dvd.profile.id == currentProfile.id" ng-click="give(dvd)">Отдать</button>
+            </div>
+        </div>
+    </div>
+</div>

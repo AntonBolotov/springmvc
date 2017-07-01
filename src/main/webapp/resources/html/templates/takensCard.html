@@ -1,0 +1,18 @@
+<div class="band" >
+    <div class="item-1" ng-repeat="item in takenCards">
+        <div href="" class="card">
+            <div class="thumb" ng-if="!item.dvd.poster" style="background-image: url(/resources/img/unknown.jpg);"></div>
+            <div class="thumb" ng-if="item.dvd.poster" style="background-image: url(data:image/jpeg;base64,{{item.dvd.poster}});"></div>
+            <article>
+                <h1>{{item.dvd.name}}</h1>
+                <span>{{item.dvd.description}}</span>
+
+            </article>
+            <span class="user-label">{{item.dvd.profile.name}}</span>
+
+            <div class="button-bar text-center">
+                <button class="btn btn-primary"  ng-click="retrieve(item)">Вернуть</button>
+            </div>
+        </div>
+    </div>
+</div>
