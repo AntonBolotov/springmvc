@@ -1,17 +1,17 @@
 **Забираем проект**
 1. git clone https://github.com/AntonBolotov/springmvc.git
 
-Запускаем базу данных
+**Запускаем базу данных**
 
 1. открываем консоль и переходим в папку <%папка проекта%>/hsqldb-2.4.0/hsqldb/lib
 2. выполняем комманду
     java -cp hsqldb.jar org.hsqldb.er.Server --database.0 file:mydb --dbname.0 dvd_exchange
 
 
-Развертываем приложение
+**Развертываем приложение**
 1. Нужно настроить в Tomcat пользователя, с правами для выполнения операции развертывания.
 Для этого в файле tomcat-users.xml (находится в папке conf, где установлен Tomcat) создаем нужную роль manager-script и пользователя с этой ролью
-<user username="tomcat" password="123" roles="manager-gui,manager-script"/>
+`<user username="tomcat" password="123" roles="manager-gui,manager-script"/>`
 
 2. В конфигурационном файле Maven settings.xml (находится в папке conf, где установлен Maven) в разделе servers добавляем сервер Tomcat, с указанием логина и пароля пользователя, созданного в пункте 1
 `<servers>
