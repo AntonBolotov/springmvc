@@ -27,7 +27,7 @@
   открываться приложение
 
 5. Устанавливаем в коннекторе максимальный размер пересылаемых файлов maxPostSize="52428800"
-<Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" maxPostSize="52428800"/>
+`<Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" maxPostSize="52428800"/>`
 
 6. Рестартуем tomcat
 
