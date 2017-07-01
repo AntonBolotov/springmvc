@@ -1,13 +1,18 @@
 Забираем проект
-1.
+1. git clone https://github.com/AntonBolotov/springmvc.git
 
 Запускаем базу данных
 
-1. открываем консоль и переходим в папку c hsqldb.jar
-   Например cd ~/app/hsqldb-2.4.0/hsqldb/lib
+1. открываем консоль и переходим в папку <%папка проекта%>/hsqldb-2.4.0/hsqldb/lib
 2. выполняем комманду
     java -cp hsqldb.jar org.hsqldb.er.Server --database.0 file:mydb --dbname.0 dvd_exchange
 
 
 
 1 <Connector port="8080" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" maxPostSize="52428800"/>
+
+
+app/apache-tomcat-8.5.15/bin/catalina.sh start
+app/apache-tomcat-8.5.15/bin/catalina.sh stop
+
+mvn clean package tomcat7:redeploy
